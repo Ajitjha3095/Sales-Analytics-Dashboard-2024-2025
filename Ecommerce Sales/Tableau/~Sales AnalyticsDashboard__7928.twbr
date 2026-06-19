@@ -1,0 +1,1891 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20261.26.0410.0924                               -->
+<workbook original-version='18.1' source-build='2026.1.1 (20261.26.0410.0924)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <Extensions />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <_.fcp.VizExtensions.true...VizExtensions />
+    <_.fcp.VizExtensionsDupEncodingUUID.true...VizExtensionsDupEncodingUUID />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Select Year' datatype='integer' default-format='n0;-0' name='[Parameter 1]' param-domain-type='list' role='measure' type='quantitative' value='2025'>
+        <calculation class='tableau' formula='2025' />
+        <members>
+          <member value='2022' />
+          <member value='2023' />
+          <member value='2024' />
+          <member value='2025' />
+          <member value='2026' />
+        </members>
+      </column>
+    </datasource>
+    <datasource caption='Data Set' inline='true' name='federated.1s8qpuo034p2hb1abfxk10uzmglk' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Data Set' name='textscan.06e6r6c1io281x1d453to0f63pgt'>
+            <connection class='textscan' directory='C:/Users/Admin/Desktop/Workspace/2026/Dashboard/June/Ecommerce Sales/Data set' filename='Data Set.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.06e6r6c1io281x1d453to0f63pgt' name='Data Set.csv' table='[Data Set#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='Order_ID' ordinal='0' />
+            <column datatype='date' name='Order_Date' ordinal='1' />
+            <column datatype='integer' name='Year' ordinal='2' />
+            <column datatype='integer' name='Month' ordinal='3' />
+            <column datatype='integer' name='Quarter' ordinal='4' />
+            <column datatype='string' name='Product_Name' ordinal='5' />
+            <column datatype='string' name='Category' ordinal='6' />
+            <column datatype='string' name='Region' ordinal='7' />
+            <column datatype='string' name='Customer_Type' ordinal='8' />
+            <column datatype='string' name='Payment_Method' ordinal='9' />
+            <column datatype='integer' name='Quantity' ordinal='10' />
+            <column datatype='integer' name='Unit_Price' ordinal='11' />
+            <column datatype='integer' name='Total_Sales' ordinal='12' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Data Set.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Order_ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Order_ID]</local-name>
+            <parent-name>[Data Set.csv]</parent-name>
+            <remote-alias>Order_ID</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Data Set.csv_FBE45304F51843B9BE5177905A4A1D5A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Order_Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Order_Date]</local-name>
+            <parent-name>[Data Set.csv]</parent-name>
+            <remote-alias>Order_Date</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Data Set.csv_FBE45304F51843B9BE5177905A4A1D5A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[Data Set.csv]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Data Set.csv_FBE45304F51843B9BE5177905A4A1D5A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Month</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Month]</local-name>
+            <parent-name>[Data Set.csv]</parent-name>
+            <remote-alias>Month</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Data Set.csv_FBE45304F51843B9BE5177905A4A1D5A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Quarter</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Quarter]</local-name>
+            <parent-name>[Data Set.csv]</parent-name>
+            <remote-alias>Quarter</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Data Set.csv_FBE45304F51843B9BE5177905A4A1D5A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Product_Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Product_Name]</local-name>
+            <parent-name>[Data Set.csv]</parent-name>
+            <remote-alias>Product_Name</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Data Set.csv_FBE45304F51843B9BE5177905A4A1D5A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Category</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Category]</local-name>
+            <parent-name>[Data Set.csv]</parent-name>
+            <remote-alias>Category</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Data Set.csv_FBE45304F51843B9BE5177905A4A1D5A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Region</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Region]</local-name>
+            <parent-name>[Data Set.csv]</parent-name>
+            <remote-alias>Region</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Data Set.csv_FBE45304F51843B9BE5177905A4A1D5A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Customer_Type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Customer_Type]</local-name>
+            <parent-name>[Data Set.csv]</parent-name>
+            <remote-alias>Customer_Type</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Data Set.csv_FBE45304F51843B9BE5177905A4A1D5A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Payment_Method</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Payment_Method]</local-name>
+            <parent-name>[Data Set.csv]</parent-name>
+            <remote-alias>Payment_Method</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Data Set.csv_FBE45304F51843B9BE5177905A4A1D5A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Quantity</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Quantity]</local-name>
+            <parent-name>[Data Set.csv]</parent-name>
+            <remote-alias>Quantity</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Data Set.csv_FBE45304F51843B9BE5177905A4A1D5A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Unit_Price</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Unit_Price]</local-name>
+            <parent-name>[Data Set.csv]</parent-name>
+            <remote-alias>Unit_Price</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Data Set.csv_FBE45304F51843B9BE5177905A4A1D5A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Total_Sales</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Total_Sales]</local-name>
+            <parent-name>[Data Set.csv]</parent-name>
+            <remote-alias>Total_Sales</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Data Set.csv_FBE45304F51843B9BE5177905A4A1D5A]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='MarkP&amp;L' datatype='string' name='[Calculation_0084399721287681]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='IF  ISNULL([Calculation_0400234095357961]) then &apos;gray&apos;&#13;&#10;ELSEIF [Calculation_0400234095357961]&lt;0 then &apos;pink&apos;&#13;&#10;ELSEIF [Calculation_0400234095357961]&gt;0 then &apos;teal&apos;&#13;&#10;END' />
+      </column>
+      <column caption='Total order' datatype='integer' name='[Calculation_0230635472347136]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNTD([Order_ID])' />
+      </column>
+      <column caption='Current Year Sales' datatype='integer' name='[Calculation_0400234080985088]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF YEAR([Order_Date]) = [Parameters].[Parameter 1] THEN [Total_Sales]&#13;&#10;END' />
+      </column>
+      <column caption='YoY Growth %' datatype='real' name='[Calculation_0400234084630531]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='(([Calculation_0400234080985088] -[Calculation_0406006178922496])/[Calculation_0406006178922496])' />
+      </column>
+      <column caption='Calculation1' datatype='real' default-format='p0.00%' name='[Calculation_0400234085814276]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF LOOKUP(ZN(SUM([Total_Sales])), -1) = 0 OR &#13;&#10;   ISNULL(LOOKUP(SUM([Total_Sales]), -1))&#13;&#10;THEN NULL&#13;&#10;ELSE &#13;&#10;  (ZN(SUM([Total_Sales])) - LOOKUP(ZN(SUM([Total_Sales])), -1))&#13;&#10;  / ABS(LOOKUP(ZN(SUM([Total_Sales])), -1))&#13;&#10;END'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Sales LY' datatype='integer' name='[Calculation_0400234091376647]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='LOOKUP(SUM([Total_Sales]), -1)'>
+          <table-calc level-address='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[yr:Order_Date:ok]' ordering-field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[Order_Date]' ordering-type='Field' />
+        </calculation>
+      </column>
+      <column caption='Sales YoY %' datatype='real' default-format='p0.00%' name='[Calculation_0400234091462664]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF ISNULL([Calculation_0400234091376647]) OR [Calculation_0400234091376647] = 0&#13;&#10; THEN NULL&#13;&#10; ELSE&#13;&#10;  (SUM([Total_Sales]) - [Calculation_0400234091376647]) / ABS([Calculation_0400234091376647])&#13;&#10;END'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='VS Last Year %' datatype='real' datatype-customized='true' default-format='*0.00%, -0.00%' name='[Calculation_0400234095357961]' role='measure' type='ordinal'>
+        <calculation class='tableau' formula='(SUM([Calculation_0400234080985088])- SUM([Calculation_0406006178922496])) / SUM([Calculation_0406006178922496])' />
+      </column>
+      <column caption='Oder date (year)' datatype='integer' name='[Calculation_0400234102267914]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='YEAR([Order_Date])' />
+      </column>
+      <column caption='Previous Year Sales' datatype='integer' name='[Calculation_0406006178922496]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF YEAR([Order_Date]) = [Parameters].[Parameter 1]-1 THEN [Total_Sales]&#13;&#10;END' />
+      </column>
+      <column caption='Customer Type' datatype='string' name='[Customer_Type]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Month]' role='dimension' type='quantitative' />
+      <column caption='Order Date' datatype='date' name='[Order_Date]' role='dimension' type='ordinal' />
+      <column caption='Order ID' datatype='integer' name='[Order_ID]' role='dimension' type='ordinal' />
+      <column caption='Payment Method' datatype='string' name='[Payment_Method]' role='dimension' type='nominal' />
+      <column caption='Product Name' datatype='string' name='[Product_Name]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Quarter]' role='dimension' type='quantitative' />
+      <column caption='Total Sales' datatype='integer' name='[Total_Sales]' role='measure' type='quantitative' />
+      <column caption='Unit Price' datatype='integer' name='[Unit_Price]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+      <column caption='Data Set.csv' datatype='table' name='[__tableau_internal_object_id__].[Data Set.csv_FBE45304F51843B9BE5177905A4A1D5A]' role='measure' type='quantitative' />
+      <column-instance column='[Order_Date]' derivation='Year' name='[yr:Order_Date:ok]' pivot='key' type='ordinal' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Select Year' datatype='integer' default-format='n0;-0' name='[Parameter 1]' param-domain-type='list' role='measure' type='quantitative' value='2025'>
+          <calculation class='tableau' formula='2025' />
+        </column>
+      </datasource-dependencies>
+      <object-graph>
+        <objects>
+          <object caption='Data Set.csv' id='Data Set.csv_FBE45304F51843B9BE5177905A4A1D5A'>
+            <properties context=''>
+              <relation connection='textscan.06e6r6c1io281x1d453to0f63pgt' name='Data Set.csv' table='[Data Set#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='Order_ID' ordinal='0' />
+                  <column datatype='date' name='Order_Date' ordinal='1' />
+                  <column datatype='integer' name='Year' ordinal='2' />
+                  <column datatype='integer' name='Month' ordinal='3' />
+                  <column datatype='integer' name='Quarter' ordinal='4' />
+                  <column datatype='string' name='Product_Name' ordinal='5' />
+                  <column datatype='string' name='Category' ordinal='6' />
+                  <column datatype='string' name='Region' ordinal='7' />
+                  <column datatype='string' name='Customer_Type' ordinal='8' />
+                  <column datatype='string' name='Payment_Method' ordinal='9' />
+                  <column datatype='integer' name='Quantity' ordinal='10' />
+                  <column datatype='integer' name='Unit_Price' ordinal='11' />
+                  <column datatype='integer' name='Total_Sales' ordinal='12' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Avg Order Value'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Data Set' name='federated.1s8qpuo034p2hb1abfxk10uzmglk' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1s8qpuo034p2hb1abfxk10uzmglk'>
+            <column caption='Order Date' datatype='date' name='[Order_Date]' role='dimension' type='ordinal' />
+            <column caption='Total Sales' datatype='integer' name='[Total_Sales]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+            <column-instance column='[Total_Sales]' derivation='Avg' name='[avg:Total_Sales:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Order_Date]' derivation='Year' name='[yr:Order_Date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Year:qk]' included-values='all' />
+          <slices>
+            <column>[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Year:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <_.fcp.VizExtensions.false...mark class='Automatic' />
+            <_.fcp.VizExtensions.true...mark class='VizExtension' />
+            <_.fcp.VizExtensions.true...add-in add-in-id='com.ladataviz.extension.bang' extension-url='https://partner-extensions.tableauusercontent.com/viz/ladataviz/all/kpi.html' extension-version='1.0.0' instance-id='81DBA19810BC4ABC9A0FB42F18972BA3'>
+              <instance-settings>
+                <setting key='vizConfig' value='{&quot;backgroundColor&quot;:&quot;#f5f5f5b8&quot;,&quot;fitHeight&quot;:true,&quot;fitWidth&quot;:true,&quot;fixedHeight&quot;:[462],&quot;fixedWidth&quot;:[965],&quot;displayLabels&quot;:true,&quot;labelCompactDisplay&quot;:&quot;short&quot;,&quot;labelDecimals&quot;:[2],&quot;labelFontColor&quot;:&quot;#000000&quot;,&quot;labelFontSize&quot;:[12],&quot;labelLocale&quot;:&quot;auto&quot;,&quot;labelMatchColor&quot;:false,&quot;labelNotation&quot;:&quot;compact&quot;,&quot;labelPixelOrPoint&quot;:&quot;px&quot;,&quot;labelPrefix&quot;:&quot;&quot;,&quot;labelStrokeColor&quot;:&quot;#ffffff&quot;,&quot;labelStrokeWidth&quot;:[0],&quot;labelStyle&quot;:&quot;number&quot;,&quot;labelSuffix&quot;:&quot;&quot;,&quot;labelWeight&quot;:&quot;normal&quot;,&quot;kpiComparisonFontSize&quot;:&quot;manual&quot;,&quot;kpiComparisonFontSizeValue&quot;:[13],&quot;kpiSubtitleFontSize&quot;:&quot;auto&quot;,&quot;kpiSubtitleFontSizeValue&quot;:[16],&quot;kpiTitleFontSize&quot;:&quot;auto&quot;,&quot;kpiTitleFontSizeValue&quot;:[20],&quot;kpiValueFontSize&quot;:&quot;auto&quot;,&quot;kpiValueFontSizeValue&quot;:[60],&quot;axisXColunmType&quot;:&quot;continuous&quot;,&quot;axisXDataType&quot;:&quot;date-time&quot;,&quot;axisXExactTicks&quot;:true,&quot;axisXLabelFontSize&quot;:[12],&quot;axisXLineColor&quot;:&quot;#dddddd&quot;,&quot;axisXMargin&quot;:[10],&quot;axisXName&quot;:&quot;YEAR(Order Date)&quot;,&quot;axisXSelectedTimeFormat&quot;:&quot;Year (2024)&quot;,&quot;axisXTextColor&quot;:&quot;#666666&quot;,&quot;axisXTicksNumber&quot;:4,&quot;axisXType&quot;:&quot;int&quot;,&quot;displayXAxis&quot;:true,&quot;areaFillOpacity&quot;:[0.4],&quot;barPadding&quot;:[0.1],&quot;chart&quot;:&quot;area&quot;,&quot;chartColor&quot;:&quot;#4E79A7&quot;,&quot;compareYearOverYear&quot;:false,&quot;comparisonType&quot;:&quot;previous&quot;,&quot;curve&quot;:&quot;d3.curveMonotoneX&quot;,&quot;firstUse&quot;:false,&quot;kpiField&quot;:&quot;AVG(Total Sales)&quot;,&quot;kpiName&quot;:&quot;Avg Order Value&quot;,&quot;lineWidth&quot;:[2],&quot;mainKPIColor&quot;:&quot;#4E79A7&quot;,&quot;mainTitleColor&quot;:&quot;#211f54&quot;,&quot;message&quot;:&quot;vs Last Year&quot;,&quot;messageWasUpdated&quot;:false,&quot;negativeColor&quot;:&quot;#FF3D00&quot;,&quot;numberOfDataPoints&quot;:[12],&quot;pointSize&quot;:[3],&quot;positiveColor&quot;:&quot;#00C853&quot;,&quot;previousYearColor&quot;:&quot;#999999&quot;,&quot;previousYearDashed&quot;:true,&quot;previousYearOpacity&quot;:[0.6],&quot;previousYearStyle&quot;:&quot;reference&quot;,&quot;previousYearWidth&quot;:[2],&quot;roundedCornersPx&quot;:[0],&quot;showAreaLine&quot;:true,&quot;showChart&quot;:false,&quot;showComparisonValue&quot;:false,&quot;showEvolutionNumber&quot;:false,&quot;showEvolutionPercentage&quot;:true,&quot;showKPI&quot;:true,&quot;showLegend&quot;:true,&quot;showPoints&quot;:true,&quot;showTarget&quot;:false,&quot;showTargetNumber&quot;:true,&quot;showTargetPercentage&quot;:true,&quot;showTargetValue&quot;:false,&quot;subtitleColor&quot;:&quot;#060505&quot;,&quot;targetColor&quot;:&quot;#FF9800&quot;,&quot;targetDashed&quot;:true,&quot;targetMessage&quot;:&quot;vs Target&quot;,&quot;targetMessageWasUpdated&quot;:false,&quot;targetNegativeColor&quot;:&quot;#FF3D00&quot;,&quot;targetOpacity&quot;:[1],&quot;targetPositiveColor&quot;:&quot;#00C853&quot;,&quot;targetStyle&quot;:&quot;reference&quot;,&quot;targetWidth&quot;:[2],&quot;useDetailAsName&quot;:false}' />
+              </instance-settings>
+              <type-settings>
+                <worksheet />
+              </type-settings>
+            </_.fcp.VizExtensions.true...add-in>
+            <encodings>
+              <_.fcp.VizExtensions.false...lod _.fcp.VizExtensionsDupEncodingUUID.true...encoding-id='{7060DE4C-2BDE-4B56-BA9E-940752406FC5}' column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[avg:Total_Sales:qk]' />
+              <_.fcp.VizExtensions.true...custom _.fcp.VizExtensionsDupEncodingUUID.true...encoding-id='{7060DE4C-2BDE-4B56-BA9E-940752406FC5}' column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[avg:Total_Sales:qk]' custom-type-name='kpi' />
+              <_.fcp.VizExtensions.false...lod _.fcp.VizExtensionsDupEncodingUUID.true...encoding-id='{C3E47622-D706-400E-B149-9B03CDEFA787}' column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[yr:Order_Date:ok]' />
+              <_.fcp.VizExtensions.true...custom _.fcp.VizExtensionsDupEncodingUUID.true...encoding-id='{C3E47622-D706-400E-B149-9B03CDEFA787}' column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[yr:Order_Date:ok]' custom-type-name='time' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{F2A5E904-0969-4A7A-BE81-865E8B8A405D}' />
+    </worksheet>
+    <worksheet name='Category Revenue Share'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontname='Tableau Bold' fontsize='14'>Category Revenue Share</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Data Set' name='federated.1s8qpuo034p2hb1abfxk10uzmglk' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1s8qpuo034p2hb1abfxk10uzmglk'>
+            <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+            <column caption='Total Sales' datatype='integer' name='[Total_Sales]' role='measure' type='quantitative' />
+            <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Total_Sales]' derivation='Sum' name='[sum:Total_Sales:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Total_Sales:qk]' field-type='quantitative' scale='log' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-family' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Total_Sales:qk]' value='Tableau Semibold' />
+            <format attr='color' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Total_Sales:qk]' value='#000000' />
+            <format attr='font-weight' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Total_Sales:qk]' value='bold' />
+            <format attr='text-format' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Total_Sales:qk]' value='n#,##0,,.00M;-#,##0,,.00M' />
+            <format attr='font-weight' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Category:nk]' value='bold' />
+            <format attr='color' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Category:nk]' value='#000000' />
+            <format attr='font-family' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Category:nk]' value='Tableau Bold' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#f5f5f5' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#4e79a7' />
+                <format attr='mark-transparency' value='219' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Total_Sales:qk]</rows>
+        <cols>[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Category:nk]</cols>
+      </table>
+      <simple-id uuid='{23CBBFFC-77FB-4C14-A67C-DD3307DBB3E4}' />
+    </worksheet>
+    <worksheet name='Customer Type Revenue Share'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontname='Tableau Semibold' fontsize='14'>Customer Type Revenue Share</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Data Set' name='federated.1s8qpuo034p2hb1abfxk10uzmglk' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1s8qpuo034p2hb1abfxk10uzmglk'>
+            <column caption='AVG(0)' datatype='real' name='[Calculation_0230635481108496]' role='measure' type='quantitative' user:unnamed='Sheet 5'>
+              <calculation class='tableau' formula='AVG(0)' />
+            </column>
+            <column caption='Avg(0)' datatype='real' name='[Calculation_0230635481153554]' role='measure' type='quantitative' user:unnamed='Sheet 5'>
+              <calculation class='tableau' formula='Avg(0)' />
+            </column>
+            <column caption='Customer Type' datatype='string' name='[Customer_Type]' role='dimension' type='nominal' />
+            <column caption='Total Sales' datatype='integer' name='[Total_Sales]' role='measure' type='quantitative' />
+            <column-instance column='[Customer_Type]' derivation='None' name='[none:Customer_Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Total_Sales]' derivation='Sum' name='[pcto:sum:Total_Sales:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column-instance column='[Total_Sales]' derivation='Sum' name='[sum:Total_Sales:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_0230635481108496]' derivation='User' name='[usr:Calculation_0230635481108496:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_0230635481153554]' derivation='User' name='[usr:Calculation_0230635481153554:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[usr:Calculation_0230635481153554:qk]' field-type='quantitative' fold='true' scope='cols' type='space' />
+            <format attr='display' class='0' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[usr:Calculation_0230635481108496:qk]' scope='cols' value='false' />
+            <format attr='display' class='0' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[usr:Calculation_0230635481153554:qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[pcto:sum:Total_Sales:qk]' value='p0.00%' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#f5f5f5' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <wedge-size column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Total_Sales:qk]' />
+              <color column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Customer_Type:nk]' />
+            </encodings>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[usr:Calculation_0230635481108496:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <wedge-size column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Total_Sales:qk]' />
+              <color column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Customer_Type:nk]' />
+              <text column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[pcto:sum:Total_Sales:qk]' />
+              <text column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Customer_Type:nk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontname='Tableau Bold'>&lt;</run>
+                <run bold='true' fontname='Tableau Bold'>[federated.1s8qpuo034p2hb1abfxk10uzmglk].[pcto:sum:Total_Sales:qk]</run>
+                <run bold='true' fontname='Tableau Bold'>&gt;</run>
+                <run bold='true' fontname='Tableau Bold'>Æ&#10;</run>
+                <run bold='true' fontname='Tableau Bold'><![CDATA[<[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Customer_Type:nk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='left' />
+                <format attr='vertical-align' value='top' />
+                <format attr='wrap' value='on' />
+                <format attr='text-orientation' value='0' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='size' value='1.2853591442108154' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[usr:Calculation_0230635481153554:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <wedge-size column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Total_Sales:qk]' />
+              <color column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Customer_Type:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='vertical-align' value='center' />
+                <format attr='text-align' value='left' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-size' value='8' />
+                <format attr='font-weight' value='bold' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='size' value='3.1270718574523926' />
+                <format attr='mark-labels-mode' value='range' />
+                <format attr='mark-labels-range-scope' value='multi-mark' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols>([federated.1s8qpuo034p2hb1abfxk10uzmglk].[usr:Calculation_0230635481108496:qk] + [federated.1s8qpuo034p2hb1abfxk10uzmglk].[usr:Calculation_0230635481153554:qk])</cols>
+      </table>
+      <simple-id uuid='{A20EE16F-A11C-4057-9E60-3F6432411C76}' />
+    </worksheet>
+    <worksheet name='Payment Method Split'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontname='Tableau Semibold' fontsize='14'>Payment Method Split</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Data Set' name='federated.1s8qpuo034p2hb1abfxk10uzmglk' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1s8qpuo034p2hb1abfxk10uzmglk'>
+            <column caption='AVG(0)' datatype='real' name='[Calculation_0230635481108496]' role='measure' type='quantitative' user:unnamed='Sheet 5'>
+              <calculation class='tableau' formula='AVG(0)' />
+            </column>
+            <column caption='Avg(0)' datatype='real' name='[Calculation_0230635481153554]' role='measure' type='quantitative' user:unnamed='Sheet 5'>
+              <calculation class='tableau' formula='Avg(0)' />
+            </column>
+            <column caption='Payment Method' datatype='string' name='[Payment_Method]' role='dimension' type='nominal' />
+            <column caption='Total Sales' datatype='integer' name='[Total_Sales]' role='measure' type='quantitative' />
+            <column-instance column='[Payment_Method]' derivation='None' name='[none:Payment_Method:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Total_Sales]' derivation='Sum' name='[pcto:sum:Total_Sales:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column-instance column='[Total_Sales]' derivation='Sum' name='[sum:Total_Sales:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_0230635481108496]' derivation='User' name='[usr:Calculation_0230635481108496:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_0230635481153554]' derivation='User' name='[usr:Calculation_0230635481153554:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[usr:Calculation_0230635481153554:qk]' field-type='quantitative' fold='true' scope='cols' type='space' />
+            <format attr='display' class='0' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[usr:Calculation_0230635481108496:qk]' scope='cols' value='false' />
+            <format attr='display' class='0' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[usr:Calculation_0230635481153554:qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#f5f5f5' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <wedge-size column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Total_Sales:qk]' />
+              <color column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Payment_Method:nk]' />
+            </encodings>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[usr:Calculation_0230635481108496:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <wedge-size column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Total_Sales:qk]' />
+              <color column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Payment_Method:nk]' />
+              <text column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[pcto:sum:Total_Sales:qk]' />
+              <text column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Payment_Method:nk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run fontalignment='1' fontname='Tableau Semibold' fontsize='8'><![CDATA[<[federated.1s8qpuo034p2hb1abfxk10uzmglk].[pcto:sum:Total_Sales:qk]>]]></run>
+                <run fontalignment='1' fontname='Tableau Semibold' fontsize='8'>Æ&#10;</run>
+                <run fontalignment='1' fontname='Tableau Semibold' fontsize='8'><![CDATA[<[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Payment_Method:nk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='left' />
+                <format attr='vertical-align' value='top' />
+                <format attr='wrap' value='on' />
+                <format attr='text-orientation' value='0' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='size' value='1.2853591442108154' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[usr:Calculation_0230635481153554:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <wedge-size column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Total_Sales:qk]' />
+              <color column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Payment_Method:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='vertical-align' value='center' />
+                <format attr='text-align' value='left' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-size' value='8' />
+                <format attr='font-weight' value='bold' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='size' value='3.1270718574523926' />
+                <format attr='mark-labels-mode' value='range' />
+                <format attr='mark-labels-range-scope' value='multi-mark' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols>([federated.1s8qpuo034p2hb1abfxk10uzmglk].[usr:Calculation_0230635481108496:qk] + [federated.1s8qpuo034p2hb1abfxk10uzmglk].[usr:Calculation_0230635481153554:qk])</cols>
+      </table>
+      <simple-id uuid='{8DAAC252-3C22-4DD6-81D4-0959F77FD6F1}' />
+    </worksheet>
+    <worksheet name='Payment Method by Region'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontname='Tableau Bold' fontsize='14'>Payment Method by Region</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Data Set' name='federated.1s8qpuo034p2hb1abfxk10uzmglk' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1s8qpuo034p2hb1abfxk10uzmglk'>
+            <column caption='Payment Method' datatype='string' name='[Payment_Method]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Region]' role='dimension' type='nominal' />
+            <column caption='Total Sales' datatype='integer' name='[Total_Sales]' role='measure' type='quantitative' />
+            <column-instance column='[Payment_Method]' derivation='None' name='[none:Payment_Method:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Region]' derivation='None' name='[none:Region:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Total_Sales]' derivation='Sum' name='[sum:Total_Sales:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='label'>
+            <format attr='font-family' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Total_Sales:qk]' value='Tableau Semibold' />
+            <format attr='color' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Total_Sales:qk]' value='#000000' />
+            <format attr='font-weight' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Total_Sales:qk]' value='bold' />
+            <format attr='text-format' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Total_Sales:qk]' value='n#,##0,,.00M;-#,##0,,.00M' />
+            <format attr='font-family' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Region:nk]' value='Tableau Bold' />
+            <format attr='font-weight' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Region:nk]' value='bold' />
+            <format attr='color' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Region:nk]' value='#000000' />
+            <format attr='font-family' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Payment_Method:nk]' value='Tableau Bold' />
+            <format attr='color' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Payment_Method:nk]' value='#000000' />
+            <format attr='font-weight' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Payment_Method:nk]' value='bold' />
+            <format attr='font-size' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Payment_Method:nk]' value='10' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#f5f5f5' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Region:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Total_Sales:qk]</rows>
+        <cols>([federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Payment_Method:nk] / [federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Region:nk])</cols>
+      </table>
+      <simple-id uuid='{39A1709D-503C-4C83-9B7D-E5AD1EF7A649}' />
+    </worksheet>
+    <worksheet name='Product Performance Matrix'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontname='Tableau Bold' fontsize='14'>Product Performance Matrix</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Data Set' name='federated.1s8qpuo034p2hb1abfxk10uzmglk' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1s8qpuo034p2hb1abfxk10uzmglk'>
+            <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+            <column caption='Order ID' datatype='integer' name='[Order_ID]' role='dimension' type='ordinal' />
+            <column caption='Product Name' datatype='string' name='[Product_Name]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Quantity]' role='measure' type='quantitative' />
+            <column caption='Total Sales' datatype='integer' name='[Total_Sales]' role='measure' type='quantitative' />
+            <column caption='Unit Price' datatype='integer' name='[Unit_Price]' role='measure' type='quantitative' />
+            <column-instance column='[Total_Sales]' derivation='Avg' name='[avg:Total_Sales:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Order_ID]' derivation='Count' name='[cnt:Order_ID:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Product_Name]' derivation='None' name='[none:Product_Name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Quantity]' derivation='Sum' name='[sum:Quantity:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Total_Sales]' derivation='Sum' name='[sum:Total_Sales:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Unit_Price]' derivation='Sum' name='[sum:Unit_Price:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <_.fcp.VizExtensions.false...mark class='Automatic' />
+            <_.fcp.VizExtensions.true...mark class='VizExtension' />
+            <_.fcp.VizExtensions.true...add-in add-in-id='com.tableau.extension.table' extension-url='https://tableau-extensions.tableauusercontent.com/table/table.html' extension-version='1.0.0' instance-id='9F141B332F3B4AD6A41AD242D2720386'>
+              <instance-settings>
+                <setting key='column-setting-EncodingId:{3BB29A2D-E900-44AE-9AEF-7F7FBAE45612}-Encoding:detail' value='{&quot;field-id&quot;:&quot;[federated.1s8qpuo034p2hb1abfxk10uzmglk].[avg:Total_Sales:qk]&quot;,&quot;encoding-type&quot;:&quot;detail&quot;,&quot;column-index&quot;:&quot;5&quot;,&quot;column-width&quot;:&quot;160.5&quot;,&quot;column-header&quot;:&quot;Avg. Unit Prices&quot;,&quot;header-formatting&quot;:&quot;{\n  \&quot;font\&quot;: {\n    \&quot;size\&quot;: \&quot;12pt\&quot;,\n    \&quot;family\&quot;: \&quot;Tableau Bold\&quot;\n  }\n}&quot;}' />
+                <setting key='column-setting-EncodingId:{800C9C38-84AC-4B08-8513-636D2C5624AE}-Encoding:detail' value='{&quot;field-id&quot;:&quot;[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Quantity:qk]&quot;,&quot;encoding-type&quot;:&quot;detail&quot;,&quot;column-index&quot;:&quot;3&quot;,&quot;column-width&quot;:&quot;114.25&quot;,&quot;column-header&quot;:&quot;Total Quantity&quot;,&quot;header-formatting&quot;:&quot;{\n  \&quot;font\&quot;: {\n    \&quot;size\&quot;: \&quot;12pt\&quot;,\n    \&quot;family\&quot;: \&quot;Tableau Bold\&quot;,\n    \&quot;color\&quot;: \&quot;#000000\&quot;\n  }\n}&quot;,&quot;general-formatting&quot;:&quot;{\n  \&quot;font\&quot;: {\n    \&quot;color\&quot;: \&quot;#000000\&quot;\n  }\n}&quot;}' />
+                <setting key='column-setting-EncodingId:{C564D981-8B7F-4576-91D6-2B93E468F941}-Encoding:detail' value='{&quot;field-id&quot;:&quot;[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Category:nk]&quot;,&quot;encoding-type&quot;:&quot;detail&quot;,&quot;column-index&quot;:&quot;1&quot;,&quot;column-width&quot;:&quot;116.640625&quot;,&quot;column-header&quot;:&quot;Category&quot;,&quot;header-formatting&quot;:&quot;{\n  \&quot;font\&quot;: {\n    \&quot;family\&quot;: \&quot;Tableau Bold\&quot;,\n    \&quot;size\&quot;: \&quot;12pt\&quot;,\n    \&quot;isBold\&quot;: true\n  }\n}&quot;,&quot;general-formatting&quot;:&quot;{\n  \&quot;font\&quot;: {\n    \&quot;color\&quot;: \&quot;#000000\&quot;,\n    \&quot;size\&quot;: \&quot;10pt\&quot;\n  }\n}&quot;}' />
+                <setting key='column-setting-EncodingId:{C88BC75F-0D4B-48FF-8CBD-7678ABFA99DB}-Encoding:detail' value='{&quot;field-id&quot;:&quot;[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Total_Sales:qk]&quot;,&quot;encoding-type&quot;:&quot;detail&quot;,&quot;column-index&quot;:&quot;6&quot;,&quot;column-width&quot;:&quot;155.5&quot;,&quot;column-header&quot;:&quot;Total Sales&quot;,&quot;header-formatting&quot;:&quot;{\n  \&quot;font\&quot;: {\n    \&quot;color\&quot;: \&quot;#000000\&quot;,\n    \&quot;size\&quot;: \&quot;12pt\&quot;,\n    \&quot;family\&quot;: \&quot;Tableau Bold\&quot;\n  }\n}&quot;}' />
+                <setting key='column-setting-EncodingId:{D773FBD2-C5B6-4A47-9D91-1927F1A3EA71}-Encoding:detail' value='{&quot;field-id&quot;:&quot;[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Product_Name:nk]&quot;,&quot;encoding-type&quot;:&quot;detail&quot;,&quot;column-index&quot;:&quot;0&quot;,&quot;column-width&quot;:&quot;144.28125&quot;,&quot;column-header&quot;:&quot;Product&quot;,&quot;general-formatting&quot;:&quot;{\n  \&quot;font\&quot;: {\n    \&quot;color\&quot;: \&quot;#000000\&quot;,\n    \&quot;isBold\&quot;: true,\n    \&quot;size\&quot;: \&quot;10pt\&quot;,\n    \&quot;family\&quot;: \&quot;Tableau Semibold\&quot;\n  },\n  \&quot;backgroundColor\&quot;: \&quot;#e6e6e6\&quot;\n}&quot;,&quot;header-formatting&quot;:&quot;{\n  \&quot;font\&quot;: {\n    \&quot;color\&quot;: \&quot;#000000\&quot;,\n    \&quot;isBold\&quot;: true,\n    \&quot;size\&quot;: \&quot;12pt\&quot;\n  }\n}&quot;}' />
+                <setting key='column-setting-EncodingId:{F683818A-42F2-45FD-BBA2-D74F6A145A4D}-Encoding:detail' value='{&quot;field-id&quot;:&quot;[federated.1s8qpuo034p2hb1abfxk10uzmglk].[cnt:Order_ID:qk]&quot;,&quot;encoding-type&quot;:&quot;detail&quot;,&quot;column-index&quot;:&quot;2&quot;,&quot;column-width&quot;:&quot;98&quot;,&quot;column-header&quot;:&quot;Orders&quot;,&quot;header-formatting&quot;:&quot;{\n  \&quot;font\&quot;: {\n    \&quot;size\&quot;: \&quot;12pt\&quot;,\n    \&quot;isBold\&quot;: true,\n    \&quot;family\&quot;: \&quot;Tableau Bold\&quot;\n  }\n}&quot;,&quot;general-formatting&quot;:&quot;{\n  \&quot;font\&quot;: {\n    \&quot;color\&quot;: \&quot;#000000\&quot;\n  }\n}&quot;}' />
+                <setting key='column-setting-EncodingId:{F741993A-BBF5-4A6F-B69C-08EC1DAD7A44}-Encoding:detail' value='{&quot;field-id&quot;:&quot;[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Unit_Price:qk]&quot;,&quot;encoding-type&quot;:&quot;detail&quot;,&quot;column-index&quot;:&quot;4&quot;,&quot;column-width&quot;:&quot;147.375&quot;,&quot;column-header&quot;:&quot;Revenue / Order&quot;,&quot;header-formatting&quot;:&quot;{\n  \&quot;font\&quot;: {\n    \&quot;family\&quot;: \&quot;Tableau Bold\&quot;,\n    \&quot;size\&quot;: \&quot;12pt\&quot;,\n    \&quot;isBold\&quot;: true\n  }\n}&quot;}' />
+                <setting key='dialog-status' value='none-open' />
+                <setting key='setting-key-version' value='V2' />
+                <setting key='table-settings' value='{&quot;showToolbar&quot;:true,&quot;showFilters&quot;:false,&quot;includeNullsForRangeFilters&quot;:false,&quot;columnFilterType&quot;:&quot;contains&quot;,&quot;showSearch&quot;:true,&quot;showTooltips&quot;:true,&quot;showExcelDownload&quot;:false,&quot;allowColumnReorder&quot;:true,&quot;showColumnReorderControls&quot;:true,&quot;showShowFields&quot;:true,&quot;stringNullText&quot;:&quot;Null&quot;,&quot;numberNullText&quot;:&quot;Null&quot;,&quot;dateNullText&quot;:&quot;Null&quot;,&quot;showTotals&quot;:false,&quot;useTableFontForTotals&quot;:true,&quot;totalsRowLocation&quot;:&quot;top&quot;,&quot;totalsFormatting&quot;:{&quot;font&quot;:{&quot;isBold&quot;:true,&quot;color&quot;:&quot;#333333&quot;}}}' />
+              </instance-settings>
+              <type-settings>
+                <worksheet />
+              </type-settings>
+            </_.fcp.VizExtensions.true...add-in>
+            <encodings>
+              <lod _.fcp.VizExtensionsDupEncodingUUID.true...encoding-id='{D773FBD2-C5B6-4A47-9D91-1927F1A3EA71}' column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Product_Name:nk]' />
+              <lod _.fcp.VizExtensionsDupEncodingUUID.true...encoding-id='{C564D981-8B7F-4576-91D6-2B93E468F941}' column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Category:nk]' />
+              <tooltip _.fcp.VizExtensionsDupEncodingUUID.true...encoding-id='{90AFD2B0-C466-4C37-988A-61AEA62B8541}' column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Unit_Price:qk]' />
+              <lod _.fcp.VizExtensionsDupEncodingUUID.true...encoding-id='{F683818A-42F2-45FD-BBA2-D74F6A145A4D}' column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[cnt:Order_ID:qk]' />
+              <lod _.fcp.VizExtensionsDupEncodingUUID.true...encoding-id='{800C9C38-84AC-4B08-8513-636D2C5624AE}' column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Quantity:qk]' />
+              <lod _.fcp.VizExtensionsDupEncodingUUID.true...encoding-id='{F741993A-BBF5-4A6F-B69C-08EC1DAD7A44}' column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Unit_Price:qk]' />
+              <lod _.fcp.VizExtensionsDupEncodingUUID.true...encoding-id='{3BB29A2D-E900-44AE-9AEF-7F7FBAE45612}' column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[avg:Total_Sales:qk]' />
+              <lod _.fcp.VizExtensionsDupEncodingUUID.true...encoding-id='{C88BC75F-0D4B-48FF-8CBD-7678ABFA99DB}' column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Total_Sales:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='has-stroke' value='false' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{F5D25F24-42BA-4234-B25B-88929D76F386}' />
+    </worksheet>
+    <worksheet name='Quarterly Revenue Trend (2022–2026)'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontname='Tableau Bold' fontsize='14'>Quarterly Revenue Trend (2022–2026)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Data Set' name='federated.1s8qpuo034p2hb1abfxk10uzmglk' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1s8qpuo034p2hb1abfxk10uzmglk'>
+            <column caption='Order Date' datatype='date' name='[Order_Date]' role='dimension' type='ordinal' />
+            <column caption='Total Sales' datatype='integer' name='[Total_Sales]' role='measure' type='quantitative' />
+            <column-instance column='[Total_Sales]' derivation='Sum' name='[sum:Total_Sales:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Order_Date]' derivation='Quarter-Trunc' name='[tqr:Order_Date:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='tick-color' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Total_Sales:qk]' value='#ffffff' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Total_Sales:qk]' value='n#,##0,,.00M;-#,##0,,.00M' />
+            <format attr='color' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Total_Sales:qk]' value='#000000' />
+            <format attr='font-weight' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Total_Sales:qk]' value='normal' />
+            <format attr='color' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[tqr:Order_Date:qk]' value='#000000' />
+            <format attr='font-family' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[tqr:Order_Date:qk]' value='Tableau Bold' />
+            <format attr='font-weight' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[tqr:Order_Date:qk]' value='normal' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='background-color' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[tqr:Order_Date:qk]' value='#ffffff' />
+            <format attr='background-color' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Total_Sales:qk]' value='#ffffff' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Total_Sales:qk]' value='n#,##0,,.00M;-#,##0,,.00M' />
+            <format attr='font-weight' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Total_Sales:qk]' value='bold' />
+            <format attr='font-size' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Total_Sales:qk]' value='9' />
+            <format attr='font-family' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Total_Sales:qk]' value='Tableau Bold' />
+            <format attr='font-family' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[tqr:Order_Date:qk]' value='Tableau Bold' />
+            <format attr='font-weight' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[tqr:Order_Date:qk]' value='bold' />
+            <format attr='color' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[tqr:Order_Date:qk]' value='#000000' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#f5f5f5' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Total_Sales:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Total_Sales:qk]</rows>
+        <cols>[federated.1s8qpuo034p2hb1abfxk10uzmglk].[tqr:Order_Date:qk]</cols>
+      </table>
+      <simple-id uuid='{AB175E95-63E0-4DBB-8712-BD1F34437221}' />
+    </worksheet>
+    <worksheet name='Revenue by Category'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontname='Tableau Semibold' fontsize='14'>Revenue by Category</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Data Set' name='federated.1s8qpuo034p2hb1abfxk10uzmglk' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1s8qpuo034p2hb1abfxk10uzmglk'>
+            <column caption='AVG(0)' datatype='real' name='[Calculation_0230635481108496]' role='measure' type='quantitative' user:unnamed='Sheet 5'>
+              <calculation class='tableau' formula='AVG(0)' />
+            </column>
+            <column caption='Avg(0)' datatype='real' name='[Calculation_0230635481153554]' role='measure' type='quantitative' user:unnamed='Sheet 5'>
+              <calculation class='tableau' formula='Avg(0)' />
+            </column>
+            <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+            <column caption='Total Sales' datatype='integer' name='[Total_Sales]' role='measure' type='quantitative' />
+            <column-instance column='[Category]' derivation='Attribute' name='[attr:Category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Total_Sales]' derivation='Sum' name='[pcto:sum:Total_Sales:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column-instance column='[Total_Sales]' derivation='Sum' name='[sum:Total_Sales:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_0230635481108496]' derivation='User' name='[usr:Calculation_0230635481108496:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_0230635481153554]' derivation='User' name='[usr:Calculation_0230635481153554:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[usr:Calculation_0230635481153554:qk]' field-type='quantitative' fold='true' scope='cols' type='space' />
+            <format attr='display' class='0' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[usr:Calculation_0230635481108496:qk]' scope='cols' value='false' />
+            <format attr='display' class='0' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[usr:Calculation_0230635481153554:qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#f5f5f5' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Category:nk]' />
+              <wedge-size column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Total_Sales:qk]' />
+              <color column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[:Measure Names]' />
+            </encodings>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[usr:Calculation_0230635481108496:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Category:nk]' />
+              <wedge-size column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Total_Sales:qk]' />
+              <tooltip column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[attr:Category:nk]' />
+              <text column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[pcto:sum:Total_Sales:qk]' />
+              <color column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[:Measure Names]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run fontalignment='1' fontname='Tableau Semibold' fontsize='8'><![CDATA[<[federated.1s8qpuo034p2hb1abfxk10uzmglk].[pcto:sum:Total_Sales:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='left' />
+                <format attr='vertical-align' value='top' />
+                <format attr='wrap' value='on' />
+                <format attr='text-orientation' value='0' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='size' value='1.4172928333282471' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[usr:Calculation_0230635481153554:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Category:nk]' />
+              <wedge-size column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Total_Sales:qk]' />
+              <color column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='vertical-align' value='center' />
+                <format attr='text-align' value='left' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-size' value='8' />
+                <format attr='font-weight' value='bold' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='size' value='2.9060773849487305' />
+                <format attr='mark-labels-mode' value='range' />
+                <format attr='mark-labels-range-scope' value='multi-mark' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols>([federated.1s8qpuo034p2hb1abfxk10uzmglk].[usr:Calculation_0230635481108496:qk] + [federated.1s8qpuo034p2hb1abfxk10uzmglk].[usr:Calculation_0230635481153554:qk])</cols>
+      </table>
+      <simple-id uuid='{BCCB5F82-1832-4EBB-A194-21792F1952C2}' />
+    </worksheet>
+    <worksheet name='Revenue by Customer Type'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontname='Tableau Bold' fontsize='14'>Revenue by Customer Type</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Data Set' name='federated.1s8qpuo034p2hb1abfxk10uzmglk' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1s8qpuo034p2hb1abfxk10uzmglk'>
+            <column caption='Customer Type' datatype='string' name='[Customer_Type]' role='dimension' type='nominal' />
+            <column caption='Total Sales' datatype='integer' name='[Total_Sales]' role='measure' type='quantitative' />
+            <column-instance column='[Customer_Type]' derivation='None' name='[none:Customer_Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Total_Sales]' derivation='Sum' name='[sum:Total_Sales:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='label'>
+            <format attr='font-family' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Total_Sales:qk]' value='Tableau Semibold' />
+            <format attr='color' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Total_Sales:qk]' value='#000000' />
+            <format attr='font-weight' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Total_Sales:qk]' value='bold' />
+            <format attr='font-family' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Customer_Type:nk]' value='Tableau Bold' />
+            <format attr='font-size' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Customer_Type:nk]' value='10' />
+            <format attr='font-weight' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Customer_Type:nk]' value='bold' />
+            <format attr='color' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Customer_Type:nk]' value='#000000' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#f5f5f5' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#4e79a7' />
+                <format attr='mark-transparency' value='219' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Total_Sales:qk]</rows>
+        <cols>[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Customer_Type:nk]</cols>
+      </table>
+      <simple-id uuid='{967D08DB-480F-4C9C-A35D-0EF505879C80}' />
+    </worksheet>
+    <worksheet name='Revenue by Region'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontname='Tableau Bold' fontsize='14'>Revenue by Region</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Data Set' name='federated.1s8qpuo034p2hb1abfxk10uzmglk' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1s8qpuo034p2hb1abfxk10uzmglk'>
+            <column datatype='string' name='[Region]' role='dimension' type='nominal' />
+            <column caption='Total Sales' datatype='integer' name='[Total_Sales]' role='measure' type='quantitative' />
+            <column-instance column='[Region]' derivation='None' name='[none:Region:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Total_Sales]' derivation='Sum' name='[sum:Total_Sales:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Total_Sales:qk]' value='n#,##0,,.00M;-#,##0,,.00M' />
+            <format attr='font-weight' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Total_Sales:qk]' value='bold' />
+            <format attr='color' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Total_Sales:qk]' value='#000000' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-weight' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Region:nk]' value='bold' />
+            <format attr='color' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Region:nk]' value='#000000' />
+            <format attr='font-weight' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Total_Sales:qk]' value='bold' />
+            <format attr='color' field='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Total_Sales:qk]' value='#000000' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#f5f5f5' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <text column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Total_Sales:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#4e79a7' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Total_Sales:qk]</rows>
+        <cols>[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Region:nk]</cols>
+      </table>
+      <simple-id uuid='{182F94AA-AD31-49D2-9629-9949EC9C5BAA}' />
+    </worksheet>
+    <worksheet name='Total Orders'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Data Set' name='federated.1s8qpuo034p2hb1abfxk10uzmglk' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1s8qpuo034p2hb1abfxk10uzmglk'>
+            <column caption='Order Date' datatype='date' name='[Order_Date]' role='dimension' type='ordinal' />
+            <column caption='Order ID' datatype='integer' name='[Order_ID]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+            <column-instance column='[Order_ID]' derivation='Count' name='[cnt:Order_ID:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Order_Date]' derivation='Year' name='[yr:Order_Date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Year:qk]' included-values='in-range'>
+            <min>2022</min>
+            <max>2025</max>
+          </filter>
+          <slices>
+            <column>[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Year:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <_.fcp.VizExtensions.false...mark class='Automatic' />
+            <_.fcp.VizExtensions.true...mark class='VizExtension' />
+            <_.fcp.VizExtensions.true...add-in add-in-id='com.ladataviz.extension.bang' extension-url='https://partner-extensions.tableauusercontent.com/viz/ladataviz/all/kpi.html' extension-version='1.0.0' instance-id='70AA94303C774EFABA72633833E632CC'>
+              <instance-settings>
+                <setting key='vizConfig' value='{&quot;backgroundColor&quot;:&quot;#f5f5f5b8&quot;,&quot;fitHeight&quot;:true,&quot;fitWidth&quot;:true,&quot;fixedHeight&quot;:[460],&quot;fixedWidth&quot;:[3090],&quot;displayLabels&quot;:true,&quot;labelCompactDisplay&quot;:&quot;short&quot;,&quot;labelDecimals&quot;:[2],&quot;labelFontColor&quot;:&quot;#000000&quot;,&quot;labelFontSize&quot;:[12],&quot;labelLocale&quot;:&quot;auto&quot;,&quot;labelMatchColor&quot;:false,&quot;labelNotation&quot;:&quot;compact&quot;,&quot;labelPixelOrPoint&quot;:&quot;px&quot;,&quot;labelPrefix&quot;:&quot;&quot;,&quot;labelStrokeColor&quot;:&quot;#ffffff&quot;,&quot;labelStrokeWidth&quot;:[0],&quot;labelStyle&quot;:&quot;number&quot;,&quot;labelSuffix&quot;:&quot;&quot;,&quot;labelWeight&quot;:&quot;normal&quot;,&quot;kpiComparisonFontSize&quot;:&quot;manual&quot;,&quot;kpiComparisonFontSizeValue&quot;:[13],&quot;kpiSubtitleFontSize&quot;:&quot;auto&quot;,&quot;kpiSubtitleFontSizeValue&quot;:[16],&quot;kpiTitleFontSize&quot;:&quot;auto&quot;,&quot;kpiTitleFontSizeValue&quot;:[20],&quot;kpiValueFontSize&quot;:&quot;auto&quot;,&quot;kpiValueFontSizeValue&quot;:[60],&quot;axisXColunmType&quot;:&quot;continuous&quot;,&quot;axisXDataType&quot;:&quot;date-time&quot;,&quot;axisXExactTicks&quot;:true,&quot;axisXLabelFontSize&quot;:[12],&quot;axisXLineColor&quot;:&quot;#dddddd&quot;,&quot;axisXMargin&quot;:[10],&quot;axisXName&quot;:&quot;YEAR(Order Date)&quot;,&quot;axisXSelectedTimeFormat&quot;:&quot;Year (2024)&quot;,&quot;axisXTextColor&quot;:&quot;#666666&quot;,&quot;axisXTicksNumber&quot;:4,&quot;axisXType&quot;:&quot;int&quot;,&quot;displayXAxis&quot;:true,&quot;areaFillOpacity&quot;:[0.4],&quot;barPadding&quot;:[0.1],&quot;chart&quot;:&quot;area&quot;,&quot;chartColor&quot;:&quot;#4E79A7&quot;,&quot;compareYearOverYear&quot;:false,&quot;comparisonType&quot;:&quot;previous&quot;,&quot;curve&quot;:&quot;d3.curveMonotoneX&quot;,&quot;firstUse&quot;:false,&quot;kpiField&quot;:&quot;CNT(Order ID)&quot;,&quot;kpiName&quot;:&quot;Total Orders&quot;,&quot;lineWidth&quot;:[2],&quot;mainKPIColor&quot;:&quot;#4E79A7&quot;,&quot;mainTitleColor&quot;:&quot;#211f54&quot;,&quot;message&quot;:&quot;vs Last Year&quot;,&quot;messageWasUpdated&quot;:false,&quot;negativeColor&quot;:&quot;#FF3D00&quot;,&quot;numberOfDataPoints&quot;:[12],&quot;pointSize&quot;:[3],&quot;positiveColor&quot;:&quot;#00C853&quot;,&quot;previousYearColor&quot;:&quot;#999999&quot;,&quot;previousYearDashed&quot;:true,&quot;previousYearOpacity&quot;:[0.6],&quot;previousYearStyle&quot;:&quot;reference&quot;,&quot;previousYearWidth&quot;:[2],&quot;roundedCornersPx&quot;:[0],&quot;showAreaLine&quot;:true,&quot;showChart&quot;:false,&quot;showComparisonValue&quot;:false,&quot;showEvolutionNumber&quot;:false,&quot;showEvolutionPercentage&quot;:true,&quot;showKPI&quot;:true,&quot;showLegend&quot;:true,&quot;showPoints&quot;:true,&quot;showTarget&quot;:false,&quot;showTargetNumber&quot;:true,&quot;showTargetPercentage&quot;:true,&quot;showTargetValue&quot;:false,&quot;subtitleColor&quot;:&quot;#161515&quot;,&quot;targetColor&quot;:&quot;#FF9800&quot;,&quot;targetDashed&quot;:true,&quot;targetMessage&quot;:&quot;vs Target&quot;,&quot;targetMessageWasUpdated&quot;:false,&quot;targetNegativeColor&quot;:&quot;#FF3D00&quot;,&quot;targetOpacity&quot;:[1],&quot;targetPositiveColor&quot;:&quot;#00C853&quot;,&quot;targetStyle&quot;:&quot;reference&quot;,&quot;targetWidth&quot;:[2],&quot;useDetailAsName&quot;:false}' />
+              </instance-settings>
+              <type-settings>
+                <worksheet />
+              </type-settings>
+            </_.fcp.VizExtensions.true...add-in>
+            <encodings>
+              <_.fcp.VizExtensions.false...lod _.fcp.VizExtensionsDupEncodingUUID.true...encoding-id='{D4E3BB24-B4E1-440F-B04A-E329784EA5E4}' column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[cnt:Order_ID:qk]' />
+              <_.fcp.VizExtensions.true...custom _.fcp.VizExtensionsDupEncodingUUID.true...encoding-id='{D4E3BB24-B4E1-440F-B04A-E329784EA5E4}' column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[cnt:Order_ID:qk]' custom-type-name='kpi' />
+              <_.fcp.VizExtensions.false...lod _.fcp.VizExtensionsDupEncodingUUID.true...encoding-id='{C3E47622-D706-400E-B149-9B03CDEFA787}' column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[yr:Order_Date:ok]' />
+              <_.fcp.VizExtensions.true...custom _.fcp.VizExtensionsDupEncodingUUID.true...encoding-id='{C3E47622-D706-400E-B149-9B03CDEFA787}' column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[yr:Order_Date:ok]' custom-type-name='time' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{D784EF1A-F9D7-41ED-9A6E-460978AE5C7B}' />
+    </worksheet>
+    <worksheet name='Total Quantity Sold'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Data Set' name='federated.1s8qpuo034p2hb1abfxk10uzmglk' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1s8qpuo034p2hb1abfxk10uzmglk'>
+            <column caption='Order Date' datatype='date' name='[Order_Date]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[Quantity]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Quantity]' derivation='Sum' name='[sum:Quantity:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Order_Date]' derivation='Year' name='[yr:Order_Date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Year:qk]' included-values='all' />
+          <slices>
+            <column>[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Year:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <_.fcp.VizExtensions.false...mark class='Automatic' />
+            <_.fcp.VizExtensions.true...mark class='VizExtension' />
+            <_.fcp.VizExtensions.true...add-in add-in-id='com.ladataviz.extension.bang' extension-url='https://partner-extensions.tableauusercontent.com/viz/ladataviz/all/kpi.html' extension-version='1.0.0' instance-id='96327488A25B446D89DC24A5AA2E7588'>
+              <instance-settings>
+                <setting key='vizConfig' value='{&quot;backgroundColor&quot;:&quot;#f5f5f5b8&quot;,&quot;fitHeight&quot;:true,&quot;fitWidth&quot;:true,&quot;fixedHeight&quot;:[460],&quot;fixedWidth&quot;:[3090],&quot;displayLabels&quot;:true,&quot;labelCompactDisplay&quot;:&quot;short&quot;,&quot;labelDecimals&quot;:[2],&quot;labelFontColor&quot;:&quot;#000000&quot;,&quot;labelFontSize&quot;:[12],&quot;labelLocale&quot;:&quot;auto&quot;,&quot;labelMatchColor&quot;:false,&quot;labelNotation&quot;:&quot;compact&quot;,&quot;labelPixelOrPoint&quot;:&quot;px&quot;,&quot;labelPrefix&quot;:&quot;&quot;,&quot;labelStrokeColor&quot;:&quot;#ffffff&quot;,&quot;labelStrokeWidth&quot;:[0],&quot;labelStyle&quot;:&quot;number&quot;,&quot;labelSuffix&quot;:&quot;&quot;,&quot;labelWeight&quot;:&quot;normal&quot;,&quot;kpiComparisonFontSize&quot;:&quot;manual&quot;,&quot;kpiComparisonFontSizeValue&quot;:[13],&quot;kpiSubtitleFontSize&quot;:&quot;auto&quot;,&quot;kpiSubtitleFontSizeValue&quot;:[16],&quot;kpiTitleFontSize&quot;:&quot;auto&quot;,&quot;kpiTitleFontSizeValue&quot;:[20],&quot;kpiValueFontSize&quot;:&quot;auto&quot;,&quot;kpiValueFontSizeValue&quot;:[60],&quot;axisXColunmType&quot;:&quot;continuous&quot;,&quot;axisXDataType&quot;:&quot;date-time&quot;,&quot;axisXExactTicks&quot;:true,&quot;axisXLabelFontSize&quot;:[12],&quot;axisXLineColor&quot;:&quot;#dddddd&quot;,&quot;axisXMargin&quot;:[10],&quot;axisXName&quot;:&quot;YEAR(Order Date)&quot;,&quot;axisXSelectedTimeFormat&quot;:&quot;Year (2024)&quot;,&quot;axisXTextColor&quot;:&quot;#666666&quot;,&quot;axisXTicksNumber&quot;:4,&quot;axisXType&quot;:&quot;int&quot;,&quot;displayXAxis&quot;:true,&quot;areaFillOpacity&quot;:[0.4],&quot;barPadding&quot;:[0.1],&quot;chart&quot;:&quot;area&quot;,&quot;chartColor&quot;:&quot;#4E79A7&quot;,&quot;compareYearOverYear&quot;:false,&quot;comparisonType&quot;:&quot;previous&quot;,&quot;curve&quot;:&quot;d3.curveMonotoneX&quot;,&quot;firstUse&quot;:false,&quot;kpiField&quot;:&quot;SUM(Quantity)&quot;,&quot;kpiName&quot;:&quot;Total Quantity Sold&quot;,&quot;lineWidth&quot;:[2],&quot;mainKPIColor&quot;:&quot;#4E79A7&quot;,&quot;mainTitleColor&quot;:&quot;#211f54&quot;,&quot;message&quot;:&quot;vs Last Year&quot;,&quot;messageWasUpdated&quot;:false,&quot;negativeColor&quot;:&quot;#FF3D00&quot;,&quot;numberOfDataPoints&quot;:[12],&quot;pointSize&quot;:[3],&quot;positiveColor&quot;:&quot;#00C853&quot;,&quot;previousYearColor&quot;:&quot;#999999&quot;,&quot;previousYearDashed&quot;:true,&quot;previousYearOpacity&quot;:[0.6],&quot;previousYearStyle&quot;:&quot;reference&quot;,&quot;previousYearWidth&quot;:[2],&quot;roundedCornersPx&quot;:[0],&quot;showAreaLine&quot;:true,&quot;showChart&quot;:false,&quot;showComparisonValue&quot;:false,&quot;showEvolutionNumber&quot;:false,&quot;showEvolutionPercentage&quot;:true,&quot;showKPI&quot;:true,&quot;showLegend&quot;:true,&quot;showPoints&quot;:true,&quot;showTarget&quot;:false,&quot;showTargetNumber&quot;:true,&quot;showTargetPercentage&quot;:true,&quot;showTargetValue&quot;:false,&quot;subtitleColor&quot;:&quot;#161515&quot;,&quot;targetColor&quot;:&quot;#FF9800&quot;,&quot;targetDashed&quot;:true,&quot;targetMessage&quot;:&quot;vs Target&quot;,&quot;targetMessageWasUpdated&quot;:false,&quot;targetNegativeColor&quot;:&quot;#FF3D00&quot;,&quot;targetOpacity&quot;:[1],&quot;targetPositiveColor&quot;:&quot;#00C853&quot;,&quot;targetStyle&quot;:&quot;reference&quot;,&quot;targetWidth&quot;:[2],&quot;useDetailAsName&quot;:false}' />
+              </instance-settings>
+              <type-settings>
+                <worksheet />
+              </type-settings>
+            </_.fcp.VizExtensions.true...add-in>
+            <encodings>
+              <_.fcp.VizExtensions.false...lod _.fcp.VizExtensionsDupEncodingUUID.true...encoding-id='{81B53C52-AA1B-41E8-9C31-562B6E98E7B1}' column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Quantity:qk]' />
+              <_.fcp.VizExtensions.true...custom _.fcp.VizExtensionsDupEncodingUUID.true...encoding-id='{81B53C52-AA1B-41E8-9C31-562B6E98E7B1}' column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Quantity:qk]' custom-type-name='kpi' />
+              <_.fcp.VizExtensions.false...lod _.fcp.VizExtensionsDupEncodingUUID.true...encoding-id='{C3E47622-D706-400E-B149-9B03CDEFA787}' column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[yr:Order_Date:ok]' />
+              <_.fcp.VizExtensions.true...custom _.fcp.VizExtensionsDupEncodingUUID.true...encoding-id='{C3E47622-D706-400E-B149-9B03CDEFA787}' column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[yr:Order_Date:ok]' custom-type-name='time' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{B56E795F-6A01-4213-8ACB-68D75CFF029A}' />
+    </worksheet>
+    <worksheet name='Total Revenue'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Data Set' name='federated.1s8qpuo034p2hb1abfxk10uzmglk' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1s8qpuo034p2hb1abfxk10uzmglk'>
+            <column caption='Order Date' datatype='date' name='[Order_Date]' role='dimension' type='ordinal' />
+            <column caption='Total Sales' datatype='integer' name='[Total_Sales]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Total_Sales]' derivation='Sum' name='[sum:Total_Sales:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Order_Date]' derivation='Year' name='[yr:Order_Date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Year:qk]' included-values='in-range'>
+            <min>2022</min>
+            <max>2025</max>
+          </filter>
+          <slices>
+            <column>[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Year:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-disallow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <_.fcp.VizExtensions.false...mark class='Automatic' />
+            <_.fcp.VizExtensions.true...mark class='VizExtension' />
+            <_.fcp.VizExtensions.true...add-in add-in-id='com.ladataviz.extension.bang' extension-url='https://partner-extensions.tableauusercontent.com/viz/ladataviz/all/kpi.html' extension-version='1.0.0' instance-id='4E71C49D193C4EAA8BCA0FB364F93187'>
+              <instance-settings>
+                <setting key='vizConfig' value='{&quot;backgroundColor&quot;:&quot;#f5f5f5b8&quot;,&quot;fitHeight&quot;:true,&quot;fitWidth&quot;:true,&quot;fixedHeight&quot;:[6720],&quot;fixedWidth&quot;:[5200],&quot;displayLabels&quot;:true,&quot;labelCompactDisplay&quot;:&quot;short&quot;,&quot;labelDecimals&quot;:[2],&quot;labelFontColor&quot;:&quot;#000000&quot;,&quot;labelFontSize&quot;:[12],&quot;labelLocale&quot;:&quot;auto&quot;,&quot;labelMatchColor&quot;:false,&quot;labelNotation&quot;:&quot;compact&quot;,&quot;labelPixelOrPoint&quot;:&quot;px&quot;,&quot;labelPrefix&quot;:&quot;&quot;,&quot;labelStrokeColor&quot;:&quot;#ffffff&quot;,&quot;labelStrokeWidth&quot;:[0],&quot;labelStyle&quot;:&quot;number&quot;,&quot;labelSuffix&quot;:&quot;&quot;,&quot;labelWeight&quot;:&quot;normal&quot;,&quot;kpiComparisonFontSize&quot;:&quot;manual&quot;,&quot;kpiComparisonFontSizeValue&quot;:[13],&quot;kpiSubtitleFontSize&quot;:&quot;auto&quot;,&quot;kpiSubtitleFontSizeValue&quot;:[16],&quot;kpiTitleFontSize&quot;:&quot;auto&quot;,&quot;kpiTitleFontSizeValue&quot;:[20],&quot;kpiValueFontSize&quot;:&quot;auto&quot;,&quot;kpiValueFontSizeValue&quot;:[60],&quot;axisXColunmType&quot;:&quot;continuous&quot;,&quot;axisXDataType&quot;:&quot;date-time&quot;,&quot;axisXExactTicks&quot;:true,&quot;axisXLabelFontSize&quot;:[12],&quot;axisXLineColor&quot;:&quot;#dddddd&quot;,&quot;axisXMargin&quot;:[10],&quot;axisXName&quot;:&quot;YEAR(Order Date)&quot;,&quot;axisXSelectedTimeFormat&quot;:&quot;Year (2024)&quot;,&quot;axisXTextColor&quot;:&quot;#666666&quot;,&quot;axisXTicksNumber&quot;:4,&quot;axisXType&quot;:&quot;int&quot;,&quot;displayXAxis&quot;:true,&quot;areaFillOpacity&quot;:[0.4],&quot;barPadding&quot;:[0.1],&quot;chart&quot;:&quot;area&quot;,&quot;chartColor&quot;:&quot;#4E79A7&quot;,&quot;compareYearOverYear&quot;:false,&quot;comparisonType&quot;:&quot;previous&quot;,&quot;curve&quot;:&quot;d3.curveMonotoneX&quot;,&quot;firstUse&quot;:false,&quot;kpiField&quot;:&quot;SUM(Total Sales)&quot;,&quot;kpiName&quot;:&quot;Total Revenue&quot;,&quot;lineWidth&quot;:[2],&quot;mainKPIColor&quot;:&quot;#4E79A7&quot;,&quot;mainTitleColor&quot;:&quot;#211f54&quot;,&quot;message&quot;:&quot;vs Last Year&quot;,&quot;messageWasUpdated&quot;:false,&quot;negativeColor&quot;:&quot;#FF3D00&quot;,&quot;numberOfDataPoints&quot;:[12],&quot;pointSize&quot;:[3],&quot;positiveColor&quot;:&quot;#00C853&quot;,&quot;previousYearColor&quot;:&quot;#999999&quot;,&quot;previousYearDashed&quot;:true,&quot;previousYearOpacity&quot;:[0.6],&quot;previousYearStyle&quot;:&quot;reference&quot;,&quot;previousYearWidth&quot;:[2],&quot;roundedCornersPx&quot;:[0],&quot;showAreaLine&quot;:true,&quot;showChart&quot;:false,&quot;showComparisonValue&quot;:false,&quot;showEvolutionNumber&quot;:false,&quot;showEvolutionPercentage&quot;:true,&quot;showKPI&quot;:true,&quot;showLegend&quot;:true,&quot;showPoints&quot;:true,&quot;showTarget&quot;:false,&quot;showTargetNumber&quot;:true,&quot;showTargetPercentage&quot;:true,&quot;showTargetValue&quot;:false,&quot;subtitleColor&quot;:&quot;#888888&quot;,&quot;targetColor&quot;:&quot;#FF9800&quot;,&quot;targetDashed&quot;:true,&quot;targetMessage&quot;:&quot;vs Target&quot;,&quot;targetMessageWasUpdated&quot;:false,&quot;targetNegativeColor&quot;:&quot;#FF3D00&quot;,&quot;targetOpacity&quot;:[1],&quot;targetPositiveColor&quot;:&quot;#00C853&quot;,&quot;targetStyle&quot;:&quot;reference&quot;,&quot;targetWidth&quot;:[2],&quot;useDetailAsName&quot;:false}' />
+              </instance-settings>
+              <type-settings>
+                <worksheet />
+              </type-settings>
+            </_.fcp.VizExtensions.true...add-in>
+            <encodings>
+              <_.fcp.VizExtensions.false...lod _.fcp.VizExtensionsDupEncodingUUID.true...encoding-id='{7060DE4C-2BDE-4B56-BA9E-940752406FC5}' column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Total_Sales:qk]' />
+              <_.fcp.VizExtensions.true...custom _.fcp.VizExtensionsDupEncodingUUID.true...encoding-id='{7060DE4C-2BDE-4B56-BA9E-940752406FC5}' column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Total_Sales:qk]' custom-type-name='kpi' />
+              <_.fcp.VizExtensions.false...lod _.fcp.VizExtensionsDupEncodingUUID.true...encoding-id='{C3E47622-D706-400E-B149-9B03CDEFA787}' column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[yr:Order_Date:ok]' />
+              <_.fcp.VizExtensions.true...custom _.fcp.VizExtensionsDupEncodingUUID.true...encoding-id='{C3E47622-D706-400E-B149-9B03CDEFA787}' column='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[yr:Order_Date:ok]' custom-type-name='time' />
+            </encodings>
+            <customized-tooltip show-buttons='false'>
+              <formatted-text>
+                <run fontalignment='1' fontcolor='#757575' fontname='Tableau Semibold'>Year of Order Date:&#9;</run>
+                <run bold='true' fontalignment='1' fontname='Tableau Semibold'><![CDATA[<[federated.1s8qpuo034p2hb1abfxk10uzmglk].[yr:Order_Date:ok]>]]></run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run fontalignment='1' fontcolor='#757575' fontname='Tableau Semibold'>Total Sales:&#9;</run>
+                <run bold='true' fontalignment='1' fontname='Tableau Semibold'><![CDATA[<[federated.1s8qpuo034p2hb1abfxk10uzmglk].[sum:Total_Sales:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+        <tooltip-style tooltip-mode='sticky' />
+      </table>
+      <simple-id uuid='{E74B5192-13A8-4339-96D2-95480AF25FF0}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontname='Tableau Bold'>Sales Analytics Dashboard</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <datasources>
+        <datasource caption='Data Set' name='federated.1s8qpuo034p2hb1abfxk10uzmglk' />
+      </datasources>
+      <datasource-dependencies datasource='federated.1s8qpuo034p2hb1abfxk10uzmglk'>
+        <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+        <column-instance column='[Year]' derivation='None' name='[none:Year:qk]' pivot='key' type='quantitative' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='5' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='5125' id='7' type-v2='title' w='98400' x='800' y='1000'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='92875' id='6' type-v2='layout-basic' w='98400' x='800' y='6125'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='background-color' value='#e6e6e6' />
+              </zone-style>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='15875' id='10' name='Avg Order Value' show-title='false' w='21000' x='58200' y='7000'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='2' />
+          </zone-style>
+        </zone>
+        <zone h='15875' id='12' name='Total Quantity Sold' show-title='false' w='19200' x='38000' y='7000'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='2' />
+          </zone-style>
+        </zone>
+        <zone h='15625' id='13' name='Total Revenue' show-title='false' w='20300' x='16800' y='7250'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='2' />
+          </zone-style>
+        </zone>
+        <zone h='7625' id='14' name='Total Revenue' param='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Year:qk]' show-domain='false' show-null-ctrls='false' type-v2='filter' w='13400' x='1600' y='16625' />
+        <zone h='15750' id='15' name='Total Orders' show-title='false' w='18700' x='79800' y='6875'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='2' />
+          </zone-style>
+        </zone>
+        <zone h='36875' id='16' name='Revenue by Category' w='26900' x='16200' y='24750' />
+        <zone h='37250' id='17' name='Payment Method Split' w='27400' x='44100' y='24625' />
+        <zone h='37500' id='18' name='Customer Type Revenue Share' w='26900' x='71900' y='25125' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='1' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{A7AA65CF-9D47-4ABB-B753-C7B42CFE0A69}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Total Revenue'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Year:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{B285CF3B-A6B7-4A01-9409-DF060EF2A9AC}' />
+    </window>
+    <window class='worksheet' name='Avg Order Value'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Year:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D9A526B0-9546-4653-9EC6-27A47B805D95}' />
+    </window>
+    <window class='worksheet' name='Total Quantity Sold'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Year:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{4688DA52-F6AB-4606-BEFE-7C92D4229B7D}' />
+    </window>
+    <window class='worksheet' name='Total Orders'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Year:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{4C9AE8C4-3E82-4E6F-A1E8-409E1733720D}' />
+    </window>
+    <window class='worksheet' name='Revenue by Category'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Category:nk]&#10;[federated.1s8qpuo034p2hb1abfxk10uzmglk].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{FA0E9088-43D8-427A-A127-D4F42B09CA20}' />
+    </window>
+    <window class='worksheet' name='Payment Method Split'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Payment_Method:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{3E8859A6-D7E7-401B-82EF-0A534392B9A1}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Customer Type Revenue Share'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Customer_Type:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{1535384C-EEF7-4E73-891D-B6B8CCD54199}' />
+    </window>
+    <window class='worksheet' name='Revenue by Region'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{70AA637E-6ABF-485C-A981-2AE7EF1C302A}' />
+    </window>
+    <window class='worksheet' name='Quarterly Revenue Trend (2022–2026)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{70C7DA77-D28A-4981-8844-D0AF96D465A4}' />
+    </window>
+    <window class='worksheet' name='Revenue by Customer Type'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{EA45C00C-D42E-4642-8E39-AE756AF313A1}' />
+    </window>
+    <window class='worksheet' name='Category Revenue Share'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{FF5E55DE-51A2-4D8B-A089-F92B342B10C3}' />
+    </window>
+    <window class='worksheet' name='Payment Method by Region'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1s8qpuo034p2hb1abfxk10uzmglk].[none:Region:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{745802AE-0737-4FA8-9F9F-5F61936C2812}' />
+    </window>
+    <window class='worksheet' name='Product Performance Matrix'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D0E56277-2AFB-470E-B5E5-336D43774B3A}' />
+    </window>
+    <window class='dashboard' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Avg Order Value' />
+        <viewpoint name='Customer Type Revenue Share'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Payment Method Split'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Revenue by Category'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Total Orders' />
+        <viewpoint name='Total Quantity Sold' />
+        <viewpoint name='Total Revenue' />
+      </viewpoints>
+      <active id='18' />
+      <simple-id uuid='{76DEB0AF-A86C-4D53-9868-1D20085236C3}' />
+    </window>
+  </windows>
+  <_.fcp.VizExtensions.true...referenced-extensions>
+    <_.fcp.VizExtensions.true...referenced-extension>
+      <manifest manifest-version='0.1'>
+        <worksheet-extension extension-version='1.0.0' id='com.ladataviz.extension.bang'>
+          <default-locale>en_US</default-locale>
+          <name resource-id='name' />
+          <description>KPI Card</description>
+          <author email='tristan@ladataviz.com' name='LaDataViz' organization='LaDataViz' website='https://www.ladataviz.com' />
+          <min-api-version>1.11</min-api-version>
+          <source-location>
+            <url>https://partner-extensions.tableauusercontent.com/viz/ladataviz/all/kpi.html</url>
+          </source-location>
+          <icon />
+          <context-menu>
+            <configure-context-menu-item />
+          </context-menu>
+          <encoding id='kpi'>
+            <display-name>KPI</display-name>
+            <role-spec>
+              <role-type>continuous-measure</role-type>
+              <role-type>discrete-measure</role-type>
+            </role-spec>
+            <fields max-count='1' />
+            <encoding-icon token='text' />
+          </encoding>
+          <encoding id='time'>
+            <display-name>Time</display-name>
+            <role-spec>
+              <role-type>continuous-dimension</role-type>
+              <role-type>discrete-dimension</role-type>
+            </role-spec>
+            <fields max-count='1' />
+            <encoding-icon token='metric' />
+          </encoding>
+          <encoding id='target'>
+            <display-name>Target</display-name>
+            <role-spec>
+              <role-type>continuous-measure</role-type>
+              <role-type>discrete-measure</role-type>
+            </role-spec>
+            <fields max-count='1' />
+            <encoding-icon token='forecast' />
+          </encoding>
+        </worksheet-extension>
+        <resources>
+          <resource id='name'>
+            <text locale='en_US'>KPI Card</text>
+          </resource>
+        </resources>
+      </manifest>
+      <referenced-views>
+        <referenced-view instances='1' viewId='Avg Order Value' />
+        <referenced-view instances='1' viewId='Total Orders' />
+        <referenced-view instances='1' viewId='Total Quantity Sold' />
+        <referenced-view instances='1' viewId='Total Revenue' />
+      </referenced-views>
+    </_.fcp.VizExtensions.true...referenced-extension>
+    <_.fcp.VizExtensions.true...referenced-extension>
+      <manifest manifest-version='0.1'>
+        <worksheet-extension extension-version='1.0.0' id='com.tableau.extension.table'>
+          <default-locale>en_US</default-locale>
+          <name resource-id='name' />
+          <description>A rich table experience that allows you to build data tables directly in Tableau. Includes conditional formatting, search, and Viz in Cell functionality.</description>
+          <author email='github@tableau.com' name='Tableau' organization='Tableau' website='https://www.tableau.com/support' />
+          <min-api-version>1.12</min-api-version>
+          <source-location>
+            <url>https://tableau-extensions.tableauusercontent.com/table/table.html</url>
+          </source-location>
+          <icon />
+          <context-menu>
+            <configure-context-menu-item />
+          </context-menu>
+        </worksheet-extension>
+        <resources>
+          <resource id='name'>
+            <text locale='en_US'>Tableau Table</text>
+          </resource>
+        </resources>
+      </manifest>
+      <referenced-views>
+        <referenced-view instances='1' viewId='Product Performance Matrix' />
+      </referenced-views>
+    </_.fcp.VizExtensions.true...referenced-extension>
+  </_.fcp.VizExtensions.true...referenced-extensions>
+</workbook>
