@@ -1,54 +1,44 @@
 <div align="center">
 
-<img width="270" height="184" alt="TMDB Project Logo" src="https://github.com/Ajitjha3095/TMBD-Analytics-ETL-Powerbi-Databricks-/blob/main/TMBD/Dashboard/Powerbi%20Screen%20Short.JPG" />
+<img width="270" height="184" alt="TMDB Project Logo" src="https://github.com/Ajitjha3095/Sales-Analytics-Dashboard-2024-2025/blob/main/Ecommerce%20Sales/Image/Powerbi%20Overview.jpg" />
+<img width="270" height="184" alt="TMDB Project Logo" src="https://github.com/Ajitjha3095/Sales-Analytics-Dashboard-2024-2025/blob/main/Ecommerce%20Sales/Image/Powerbi%20Product.jpg"/>
+
 
 # Sales Analytics Dashboard
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Databricks](https://img.shields.io/badge/Databricks-FF3621?style=for-the-badge&logo=databricks&logoColor=white)
-![Apache Spark](https://img.shields.io/badge/Apache%20Spark-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white)
 ![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
-![Delta Lake](https://img.shields.io/badge/Delta%20Lake-003366?style=for-the-badge&logo=delta&logoColor=white)
+![Tableau](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white)
+![Looker Studio](https://img.shields.io/badge/Looker%20Studio-4285F4?style=for-the-badge&logo=looker&logoColor=white)
+![DAX](https://img.shields.io/badge/DAX-KPI%20Measures-5E5E5E?style=for-the-badge)
 ![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
-![DAX](https://img.shields.io/badge/DAX-KPI%20Measures-5E5E5E?style=for-the-badge)
 ![Data Modeling](https://img.shields.io/badge/Data%20Modeling-Relationships-2F855A?style=for-the-badge)
-![Looker Studio](https://img.shields.io/badge/Looker%20Studio-Dashboards-4285F4?style=for-the-badge)
 
-> **A complete end-to-end data Analyst portfolio project**
->End-to-End BI Project — Data Extraction → Cleaning → Power BI · Tableau · Looker Studio
+> **A complete end-to-end Data Analyst portfolio project**
+> Data Extraction → Cleaning → Power BI · Tableau · Looker Studio
 
 </div>
 
 ---
 
-##  Project Overview
+## 📊 Project Overview
 
-Looker Studio: https://datastudio.google.com/reporting/02a3f1b6-832f-4551-8d39-26792ecd9003
-Power BI: (add your published link here)
-Tableau Public: (add your published link here)
-
-
-Raw data source: Sales Dataset — Kaggle (ajitjha01)
-
-
-# Sales Analytics Dashboard
-### End-to-End BI Project — Data Extraction → Cleaning → Power BI · Tableau · Looker Studio
-
-A complete analytics project covering the full pipeline: extracting raw data from Kaggle, cleaning and validating it, then building parallel dashboards across three industry-standard BI platforms. Built as a portfolio piece to demonstrate the full analyst workflow, not just final visuals.
+A retail sales analytics project covering the full BI workflow: extracting raw data from Kaggle, cleaning and validating it, then building parallel **Executive** and **Product** dashboards across three industry-standard BI platforms — Power BI, Tableau, and Looker Studio.
 
 **Live dashboards**
-- Looker Studio: https://datastudio.google.com/reporting/02a3f1b6-832f-4551-8d39-26792ecd9003
-- Power BI: *(add your published link here)*
-- Tableau Public: *(add your published link here)*
 
-**Raw data source**: [Sales Dataset — Kaggle (ajitjha01)](https://www.kaggle.com/datasets/ajitjha01/sales-dataset)
+| Platform | Link | Status |
+|---|---|---|
+| Looker Studio | https://datastudio.google.com/reporting/02a3f1b6-832f-4551-8d39-26792ecd9003 | ✅ Live |
+| Power BI | — | 📎 See `/PowerBI/Sales_Analytics_Dashboard.pbix` — open locally (see Section 6) |
+| Tableau | — | 📎 See `/Tableau/Sales_Analytics_Dashboard.twbx` — open locally (see Section 6) |
+
+**Raw data source:** [Sales Dataset — Kaggle (ajitjha01)](https://www.kaggle.com/datasets/ajitjha01/sales-dataset)
 
 ---
 
-## 1. Project Summary
-
-This project simulates a real analyst workflow end to end:
+## 🔁 Workflow
 
 1. **Extract** — pull the raw dataset from Kaggle
 2. **Clean & validate** — audit for nulls, duplicates, type issues, and logical errors
@@ -59,7 +49,7 @@ This project simulates a real analyst workflow end to end:
 | Platform | Language | Strength demonstrated |
 |---|---|---|
 | Power BI | DAX | Data modeling, time intelligence, complex measures |
-| Tableau | Calculated fields / table calcs | Visual storytelling, LOOKUP-based comparisons |
+| Tableau | Calculated fields / table calculations | Visual storytelling, LOOKUP-based comparisons |
 | Looker Studio | Calculated fields / native comparisons | Lightweight, parameter-driven, shareable reporting |
 
 Each platform includes two views:
@@ -68,7 +58,7 @@ Each platform includes two views:
 
 ---
 
-## 2. Step 1 — Data Extraction (Kaggle)
+## 1️⃣ Data Extraction (Kaggle)
 
 | Property | Detail |
 |---|---|
@@ -82,9 +72,9 @@ The raw file was downloaded as-is and loaded into a pandas DataFrame for auditin
 
 ---
 
-## 3. Step 2 — Data Cleaning & Validation
+## 2️⃣ Data Cleaning & Validation
 
-A full data quality audit was run on the raw file. Results and the decision taken for each finding are documented below — this transparency is intentional, since "what did you do with messy data" is one of the most common interview questions for this kind of project.
+A full data quality audit was run on the raw file. Each finding and the decision taken is documented below — this transparency is intentional, since "what did you do with messy data" is one of the most common interview questions for this kind of project.
 
 | Check | Finding | Decision / Action |
 |---|---|---|
@@ -95,17 +85,17 @@ A full data quality audit was run on the raw file. Results and the decision take
 | Negative / zero values | Checked `Total_Sales`, `Quantity`, `Unit_Price` for ≤ 0 | **None found** — no invalid transactions |
 | Category/Region/Payment spelling | Checked all categorical fields for casing or typo inconsistencies | 3 of 5 fields clean; `Customer_Type` contains `"Premimum"` (should read "Premium") |
 | Data type correctness | `Order_Date` loads as text, not native date | Converted to datetime in every BI tool's data load step (Power Query, Tableau's auto date detection, Looker Studio's Date semantic type) |
-| Year completeness | 2022–2025 are full calendar years; 2026 has data only through May 15 | Flagged explicitly — affects every Year-over-Year calculation (see Section 5.2) |
+| Year completeness | 2022–2025 are full calendar years; 2026 has data only through May 15 | Flagged explicitly — affects every Year-over-Year calculation (see Section 4.2) |
 
-### 3.1 Cleaning steps applied before visualization
+### Cleaning steps applied before visualization
 
 1. Converted `Order_Date` to a proper date type in each tool's data source layer.
 2. Verified and trusted `Total_Sales` as the primary revenue field (validated against `Quantity × Unit_Price`).
 3. Standardized order-counting logic to row-level counts across all three platforms, avoiding the `Order_ID` duplication issue.
-4. Preserved `"Premimum"` as-is rather than silently relabeling it, since this is documentation of the literal source data — a one-line fix (`REPLACE`/`CASE WHEN`) is noted as an optional enhancement in Section 7.
-5. Built every Year-over-Year measure with explicit handling for the partial 2026 year, instead of letting it silently distort the headline growth number (full detail in Section 5.2).
+4. Preserved `"Premimum"` as-is rather than silently relabeling it, since this is documentation of the literal source data — a one-line fix (`REPLACE`/`CASE WHEN`) is noted as an optional enhancement below.
+5. Built every Year-over-Year measure with explicit handling for the partial 2026 year, instead of letting it silently distort the headline growth number.
 
-### 3.2 Yearly revenue summary (post-validation)
+### Yearly revenue summary (post-validation)
 
 | Year | Revenue | Orders | Status |
 |---|---|---|---|
@@ -118,11 +108,11 @@ A full data quality audit was run on the raw file. Results and the decision take
 
 ---
 
-## 4. Field Dictionary
+## 3️⃣ Field Dictionary
 
 | Field | Type | Description |
 |---|---|---|
-| `Order_ID` | Integer | Transaction identifier (not fully unique — see Section 3) |
+| `Order_ID` | Integer | Transaction identifier (not fully unique — see Section 2) |
 | `Order_Date` | Date | Date the order was placed; drives all time intelligence |
 | `Year` | Integer | Calendar year, pre-extracted (2022–2026) |
 | `Month` | Integer | Calendar month (1–12) |
@@ -152,9 +142,9 @@ A full data quality audit was run on the raw file. Results and the decision take
 
 ---
 
-## 5. Step 3 — KPI & Measure Definitions
+## 4️⃣ KPI & Measure Definitions
 
-### 5.1 Base KPIs
+### 4.1 Base KPIs
 
 **Total Revenue** — ₹28,220,731 (28.22M)
 ```dax
@@ -175,7 +165,7 @@ SUM(Total_Sales)
 Total Quantity = SUM(Sales[Quantity])
 ```
 
-**Total Orders** — 1,500 (row-level count — see Section 3 on `Order_ID` duplication)
+**Total Orders** — 1,500 (row-level count — see Section 2 on `Order_ID` duplication)
 ```dax
 -- Power BI
 Total Orders = COUNTROWS(Sales)
@@ -201,9 +191,9 @@ ELSE [Total Revenue] / [Total Orders] END
 ```
 All three platforms guard against divide-by-zero so the KPI shows blank instead of an error.
 
-### 5.2 Year-over-Year Growth ("VS Last Year")
+### 4.2 Year-over-Year Growth ("VS Last Year")
 
-The most complex measure in the project. A naive `DATEADD`-based comparison with no year filter compares the whole multi-year dataset against a one-year-shifted window of itself — misleading, because 2026 is a partial year. The cleaning step in Section 3 is what surfaced this issue before it reached the dashboard.
+The most complex measure in the project. A naive `DATEADD`-based comparison with no year filter compares the whole multi-year dataset against a one-year-shifted window of itself — misleading, because 2026 is a partial year. The cleaning audit in Section 2 is what surfaced this issue before it reached the dashboard.
 
 **Power BI — final working DAX** (handles single-year selection and "Select All" gracefully):
 ```dax
@@ -262,7 +252,7 @@ YoY Growth %:          CASE WHEN Revenue_Previous_Year = 0 THEN NULL
 ```
 Live result at Year=2025: **+52.7%** revenue, **+62.9%** quantity, **+67.0%** orders — consistent with Power BI and Tableau.
 
-### 5.3 Product-Level Measures (Product View)
+### 4.3 Product-Level Measures (Product View)
 
 ```dax
 Avg Unit Price    = AVERAGE(Sales[Unit_Price])
@@ -273,7 +263,7 @@ Top Product       = TOPN(1, VALUES(Sales[Product_Name]), [Total Revenue])
 
 ---
 
-## 6. Step 4 — Dashboard Structure
+## 5️⃣ Dashboard Structure
 
 ### Executive View
 - 4 KPI cards: Total Revenue, Total Quantity Sold, Total Orders, Avg Order Value (each with VS Last Year %)
@@ -301,100 +291,86 @@ Top Product       = TOPN(1, VALUES(Sales[Product_Name]), [Total Revenue])
 
 ---
 
-## 7. Suggested Future Enhancements
+## 6️⃣ How to Run This Project
 
-- Fix the `"Premimum"` → `"Premium"` typo at the source-query layer (Power Query `Table.ReplaceValue`, Tableau data source calculated field, or a BigQuery view) rather than leaving it in the visual layer.
-- Drop the 3 exact duplicate rows identified in Section 3 at the source-load step.
-- Add a `Date_Completeness` flag column so any visual can programmatically grey out or annotate the partial 2026 period instead of relying on a documentation note.
-- Publish all three dashboards (Power BI Service, Tableau Public, Looker Studio share link) and link them at the top of this document.
-
----
-
-## 🛠️ Tech Stack Detail
-
-| Tool              | Version    | Purpose                        |
-|-------------------|------------|--------------------------------|
-| Python            | 3.8+       | API ingestion script           |
-| Apache Spark      | 3.0+       | Data processing engine         |
-| Databricks        | Latest     | Unified analytics platform     |
-| Delta Lake        | Latest     | Reliable data lake storage     |
-| SQL               | Spark SQL  | Silver and Gold transformations|
-| PowerBI Desktop   | Latest     | Business intelligence dashboard|
-| TMDB API          | v3         | Movie data source              |
-| GitHub            | -          | Version control and portfolio  |
-
-
-###  📈 Business Value
-
-This project demonstrates how modern data engineering pipelines can convert raw entertainment industry data into actionable intelligence for:
-
-Content strategy teams
-Media analysts
-Production companies
-Streaming platforms
-Marketing decision-makers
-
-
-### 🧠 Skills Demonstrated
-ETL Pipeline Development
-Data Engineering with Databricks
-Apache Spark Transformations
-Delta Lake Implementation
-Data Modeling
-DAX & KPI Design
-Power BI Dashboard Development
-API Integration
-SQL Analytics
-Business Intelligence Reporting
----
-
-## ⚙️ How to Run
-
-✅ Databricks Account  → community.cloud.databricks.com (free)
-✅ TMDB API Key        → themoviedb.org/settings/api (free)
-✅ PowerBI Desktop     → powerbi.microsoft.com (free)
+### Prerequisites
+- ✅ **Power BI Desktop** → [powerbi.microsoft.com](https://powerbi.microsoft.com) (free, Windows only)
+- ✅ **Tableau Desktop / Tableau Public** → [public.tableau.com](https://public.tableau.com) (free)
+- ✅ A Google account (for Looker Studio — no install needed)
 
 ### Steps
 
-**1. Clone Repository**
+**1. Clone this repository**
+```bash
+git clone https://github.com/Ajitjha3095/Sales-Analytics-Dashboard.git
+cd Sales-Analytics-Dashboard
+```
 
-git clone https://github.com/Ajitjha3095/TMBD-Analytics-ETL-Powerbi-Databricks-/tmdb-analytics.git
-cd tmdb-analytics
+**2. Locate the dataset**
+```
+/data/Data_Set.csv
+```
 
-**2. Add API Key**
+**3. Open in Power BI**
+- Open `Power BI Desktop`
+- File → Open → `/PowerBI/Sales_Analytics_Dashboard.pbix`
+- If prompted, repoint the data source: Home → Transform Data → Data Source Settings → Change Source → select `/data/Data_Set.csv` on your machine
+- Home → Refresh
 
-# In notebooks/01_bronze_layer.ipynb
-# Cell 2 - replace this line
-API_KEY = "your_tmdb_api_key_here"
+**4. Open in Tableau**
+- Open `Tableau Desktop`
+- File → Open → `/Tableau/Sales_Analytics_Dashboard.twbx`
+- (A `.twbx` is a packaged workbook with the data embedded, so no data source repointing should be needed — if you're instead using the raw `.twb`, connect it to `/data/Data_Set.csv` via Data → New Data Source)
 
-**3. Run Notebooks in Order**
+**5. View in Looker Studio**
+- No setup required — open the live link in Section 0: https://datastudio.google.com/reporting/02a3f1b6-832f-4551-8d39-26792ecd9003
 
-Databricks → Import notebooks → Run in order:
+> ⚠️ **A note on publishing Power BI and Tableau:** unlike Looker Studio (which is free to share via link with any Google account), publishing Power BI requires a **Power BI Pro / Fabric license**, and sharing a Tableau workbook publicly requires either **Tableau Public** (free, but the workbook and underlying data become publicly downloadable) or a paid **Tableau Server/Cloud** seat. If you don't have these yet, the `.pbix` and `.twbx` files in this repo can still be opened and explored fully for free in **Power BI Desktop** and **Tableau Desktop/Public** — they just won't have a shareable web link until you have one of the above. Tableau Public specifically is the easiest free path to a public link if you want one.
 
-01_bronze_layer.ipynb  → pulls API data
+---
 
-02_silver_layer.sql    → cleans data
+## 🧠 Skills Demonstrated
 
-03_gold_layer.sql      → builds metrics
+- Data extraction & source auditing
+- Data cleaning & quality validation
+- Data modeling (star-schema style Date table relationships)
+- DAX measure design & debugging (time intelligence, type coercion, context transition)
+- Tableau table calculations (LOOKUP, Compute Using)
+- Looker Studio calculated fields & parameters
+- Cross-platform KPI consistency design
+- Technical documentation for non-technical stakeholders
 
-**4. Open Dashboard**
+---
 
-PowerBI Desktop → Open → tmdb_dashboard.pbix
-Home → Refresh → Connect to your Databricks
+## 🚀 Suggested Future Enhancements
 
+- Fix the `"Premimum"` → `"Premium"` typo at the source-query layer (Power Query `Table.ReplaceValue`, Tableau data source calculated field, or a BigQuery view) rather than leaving it in the visual layer.
+- Drop the 3 exact duplicate rows identified during cleaning at the source-load step.
+- Add a `Date_Completeness` flag column so any visual can programmatically grey out or annotate the partial 2026 period instead of relying on a documentation note.
+- Publish to Tableau Public and/or get a Power BI Pro license to enable shareable web links for all three platforms.
 
+---
 
-## 8. Author
+## 📝 Author Notes
+
+This README documents the full workflow — extraction, a real data quality audit with measured findings, the resulting cleaning decisions, and the dashboard build — including the genuine debugging path for the Year-over-Year measure (a text/integer type-mismatch error, the partial-2026 discovery, and the final select-all-safe DAX). The intent is to show the reasoning behind the build, not only the finished visuals.
+
+---
+
+<div align="center">
+
+## 👤 Author
 
 **Ajit Jha**
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/ajitjha01)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Ajitjha3095)
-[![website](https://img.shields.io/badge/Website-181717?style=for-the-badge&logo=website&logoColor=white)](https://ajitjha.netlify.app/)
+[![Website](https://img.shields.io/badge/Website-181717?style=for-the-badge&logo=googlechrome&logoColor=white)](https://ajitjha.netlify.app/)
+
+</div>
 
 ---
 
-## MIT 📄 License
----
+## 📄 License
 
-
+MIT
